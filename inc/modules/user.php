@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_user_details() {
+function omdl_get_user_details() {
 
 	$user = wp_get_current_user();
 
@@ -14,5 +14,5 @@ function wpdl_get_user_details() {
 		'roles' => $user->roles,
 	);
 
-    return apply_filters("wpdl_get_user_details", $data, $user);
+    return apply_filters("omdl_get_user_details", $data, $user);
 }

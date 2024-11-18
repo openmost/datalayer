@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_pagination_details() {
+function omdl_get_pagination_details() {
 
 	global $wp_query;
 
@@ -12,5 +12,5 @@ function wpdl_get_pagination_details() {
 		'max_num_pages'  => $wp_query->max_num_pages,
 	);
 
-    return apply_filters("wpdl_get_pagination_details_data", $data);
+    return apply_filters("omdl_get_pagination_details_data", $data);
 }

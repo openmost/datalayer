@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_author_details() {
+function omdl_get_author_details() {
 	return array(
 		'id'           => get_the_author_meta( 'ID' ),
 		'nickname'     => get_the_author_meta( 'nickname' ),
@@ -11,15 +11,15 @@ function wpdl_get_author_details() {
 	);
 }
 
-function wpdl_get_author_page_details() {
+function omdl_get_author_page_details() {
 
 	global $wp;
 
-	$details         = wpdl_get_author_details();
+	$details         = omdl_get_author_details();
 	$details['type'] = 'author';
 	$details['url']  = home_url( add_query_arg( array(), $wp->request ) );
 	$details['path'] = add_query_arg( array(), $wp->request );
 	$details['title'] = null;
 
-	return apply_filters("wpdl_get_author_page_details", $details);
+	return apply_filters("omdl_get_author_page_details", $details);
 }

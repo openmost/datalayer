@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_error_page_details() {
+function omdl_get_error_page_details() {
 
 	global $wp;
 
@@ -14,5 +14,5 @@ function wpdl_get_error_page_details() {
 		'http_status_code' => 404,
 	);
 
-    return apply_filters("wpdl_get_error_page_details", $data);
+    return apply_filters("omdl_get_error_page_details", $data);
 }

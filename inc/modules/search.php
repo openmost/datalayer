@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_search_page_details() {
+function omdl_get_search_page_details() {
 
 	global $wp;
 
@@ -13,14 +13,14 @@ function wpdl_get_search_page_details() {
 	);
 }
 
-function wpdl_get_search_details() {
+function omdl_get_search_details() {
 
 	global $wp_query;
 
 	$data = array(
 		// Matomo default
 		'search'       => get_search_query(),
-		'search_cat'   => apply_filters('wpdl_set_search_cat', $search_cat = ''),
+		'search_cat'   => apply_filters('omdl_set_search_cat', $search_cat = ''),
 		'search_count' => $wp_query->found_posts,
 
 		// Wordpress default
@@ -29,5 +29,5 @@ function wpdl_get_search_details() {
 		'post_count'   => $wp_query->post_count,
 	);
 
-    return apply_filters("wpdl_get_search_details", $data);
+    return apply_filters("omdl_get_search_details", $data);
 }

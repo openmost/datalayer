@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_post_type_details($post_type)
+function omdl_get_post_type_details($post_type)
 {
     $type = get_post_type_object($post_type);
 
@@ -12,5 +12,5 @@ function wpdl_get_post_type_details($post_type)
         'description' => $type->description,
     );
 
-    return apply_filters("wpdl_get_post_type_details", $data, $type, $post_type);
+    return apply_filters("omdl_get_post_type_details", $data, $type, $post_type);
 }

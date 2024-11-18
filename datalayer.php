@@ -3,8 +3,8 @@
 /**
  *
  * @wordpress-plugin
- * Plugin Name: WP DataLayer
- * Plugin URI: https://openmost.io/products/wp-datalayer
+ * Plugin Name: DataLayer
+ * Plugin URI: https://openmost.io/products/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
  * Author: Openmost
  * Version: 1.0.0
@@ -18,9 +18,9 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 // Constant
-define( 'WPDATALAYER_VERSION', '1.0.0' );
-define( 'WPDATALAYER_PHP_MINIMUM', '7.2.0' );
-define( 'WPDATALAYER_WP_MINIMUM', '6.0.0' );
-define( 'WPDATALAYER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'OPENMOSTDATALAYER_VERSION', '1.0.0' );
+define( 'OPENMOSTDATALAYER_PHP_MINIMUM', '7.2.0' );
+define( 'OPENMOSTDATALAYER_WP_MINIMUM', '6.0.0' );
+define( 'OPENMOSTDATALAYER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-require_once WPDATALAYER_PLUGIN_DIR . 'inc/datalayer.php';
+require_once OPENMOSTDATALAYER_PLUGIN_DIR . 'inc/datalayer.php';

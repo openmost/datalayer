@@ -2,8 +2,8 @@
 
 if (function_exists('wpcf7_sanitize_form')) {
 
-    add_action('wp_head', 'wpdl_get_wpcf7_form_details', 10);
-    function wpdl_get_wpcf7_form_details()
+    add_action('wp_head', 'omdl_get_wpcf7_form_details', 10);
+    function omdl_get_wpcf7_form_details()
     { ?>
 
         <script>

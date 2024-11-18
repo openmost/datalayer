@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_terms_per_tax()
+function omdl_get_terms_per_tax()
 {
     $result = array();
     $taxonomies = get_object_taxonomies(array('post_type' => get_post_type()));
@@ -9,25 +9,25 @@ function wpdl_get_terms_per_tax()
         $terms = wp_get_post_terms(get_the_ID(), $taxonomy);
         if (count($terms)) {
 
-            $result[$taxonomy] = wpdl_get_taxonomy_details($taxonomy);
+            $result[$taxonomy] = omdl_get_taxonomy_details($taxonomy);
 
             foreach ($terms as $term) {
-                $result[$taxonomy]['terms'][$term->name] = wpdl_get_term_details($term);
+                $result[$taxonomy]['terms'][$term->name] = omdl_get_term_details($term);
             }
 
             // Get main term with Yoast SEO
             if (class_exists('WPSEO_Primary_Term')) {
                 $yoast_primary_term = new WPSEO_Primary_Term($taxonomy, get_the_id());
                 $term = get_term($yoast_primary_term->get_primary_term());
-                $result[$taxonomy]['primary_term'] = $term ? wpdl_get_term_details($term) : false;
+                $result[$taxonomy]['primary_term'] = $term ? omdl_get_term_details($term) : false;
             }
         }
     }
 
-    return apply_filters("wpdl_get_terms_per_tax", $result);
+    return apply_filters("omdl_get_terms_per_tax", $result);
 }
 
-function wpdl_get_parent_term($parent_id, $taxonomy_name)
+function omdl_get_parent_term($parent_id, $taxonomy_name)
 {
     if ($parent_id === 0) {
         return 0;
@@ -35,11 +35,11 @@ function wpdl_get_parent_term($parent_id, $taxonomy_name)
 
     $term = get_term($parent_id, $taxonomy_name);
 
-    return wpdl_get_term_details($term);
+    return omdl_get_term_details($term);
 }
 
 
-function wpdl_get_taxonomy_details($taxonomy)
+function omdl_get_taxonomy_details($taxonomy)
 {
     $tax = get_taxonomy($taxonomy);
 
@@ -52,7 +52,7 @@ function wpdl_get_taxonomy_details($taxonomy)
     );
 }
 
-function wpdl_get_term_details($term)
+function omdl_get_term_details($term)
 {
 
     if (!$term instanceof WP_TERM) {
@@ -67,10 +67,10 @@ function wpdl_get_term_details($term)
         'term_taxonomy_id' => $term->term_taxonomy_id,
         'taxonomy' => $term->taxonomy,
         'description' => $term->description,
-        'parent' => wpdl_get_parent_term($term->parent, $term->taxonomy),
+        'parent' => omdl_get_parent_term($term->parent, $term->taxonomy),
         'count' => $term->count,
         'filter' => $term->filter,
     );
 
-    return apply_filters("wpdl_get_term_details", $data, $term);
+    return apply_filters("omdl_get_term_details", $data, $term);
 }

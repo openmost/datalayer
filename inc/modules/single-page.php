@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_single_page_details() {
+function omdl_get_single_page_details() {
 
 	global $wp;
 
@@ -26,15 +26,15 @@ function wpdl_get_single_page_details() {
 			'post_date_gmt'     => $object->post_date_gmt,
 			'post_modified'     => $object->post_modified,
 			'post_modified_gmt' => $object->post_modified_gmt,
-			'post_type'         => wpdl_get_post_type_details( get_post_type() ),
+			'post_type'         => omdl_get_post_type_details( get_post_type() ),
 			'guid'              => $object->guid,
 			'post_mime_type'    => $object->post_mime_type ?: false,
 
 			'comment_status' => $object->comment_status,
 			'comment_count'  => $object->comment_count,
 
-			'author'     => wpdl_get_author_details(),
-			'taxonomies' => wpdl_get_terms_per_tax(),
+			'author'     => omdl_get_author_details(),
+			'taxonomies' => omdl_get_terms_per_tax(),
 
 			'page_template' => esc_html( get_page_template_slug() ),
 		);
@@ -42,5 +42,5 @@ function wpdl_get_single_page_details() {
 		$data = array_merge( $data, $array );
 	}
 
-	return apply_filters("wpdl_get_single_page_details_data", $data);
+	return apply_filters("omdl_get_single_page_details_data", $data);
 }

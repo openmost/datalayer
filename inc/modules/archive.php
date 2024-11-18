@@ -1,6 +1,6 @@
 <?php
 
-function wpdl_get_archive_page_details() {
+function omdl_get_archive_page_details() {
 
 	global $wp;
 
@@ -10,15 +10,15 @@ function wpdl_get_archive_page_details() {
 		'url'          => home_url( add_query_arg( array(), $wp->request ) ),
 		'path'         => add_query_arg( array(), $wp->request ),
 		'locale'       => get_locale(),
-		'archive_type' => wpdl_get_archive_type(),
-		'taxonomy'     => wpdl_get_archive_taxonomy(),
-		'post_type'    => wpdl_get_archive_post_type(),
-		'date'         => wpdl_get_archive_date(),
+		'archive_type' => omdl_get_archive_type(),
+		'taxonomy'     => omdl_get_archive_taxonomy(),
+		'post_type'    => omdl_get_archive_post_type(),
+		'date'         => omdl_get_archive_date(),
 	);
 }
 
 
-function wpdl_get_archive_type() {
+function omdl_get_archive_type() {
 	$object = get_queried_object();
 
 	if ( $object instanceof WP_Term ) {
@@ -36,7 +36,7 @@ function wpdl_get_archive_type() {
 	return 'not supported';
 }
 
-function wpdl_get_archive_taxonomy() {
+function omdl_get_archive_taxonomy() {
 	$object = get_queried_object();
 
 	if ( $object instanceof WP_Term ) {
@@ -46,7 +46,7 @@ function wpdl_get_archive_taxonomy() {
 	return false;
 }
 
-function wpdl_get_archive_post_type() {
+function omdl_get_archive_post_type() {
 	$object = get_queried_object();
 
 	if ( $object instanceof WP_Term ) {
@@ -61,7 +61,7 @@ function wpdl_get_archive_post_type() {
 }
 
 
-function wpdl_get_archive_date() {
+function omdl_get_archive_date() {
 
 	$date = array(
 		'year'  => get_query_var( 'year' ) ?: null,
@@ -69,5 +69,5 @@ function wpdl_get_archive_date() {
 		'day'   => get_query_var( 'day' ) ?: null,
 	);
 
-    return apply_filters('wpdl_get_archive_date', $date);
+    return apply_filters('omdl_get_archive_date', $date);
 }
