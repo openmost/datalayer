@@ -1,4 +1,4 @@
-=== Matomo Site Kit by Openmost ===
+=== DataLayer by Openmost ===
 
 Contributors: Openmost
 Requires at least: 6.0
