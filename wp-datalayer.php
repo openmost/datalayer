@@ -4,7 +4,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: WP DataLayer
- * Plugin URI: https://openmost.io/openmost-site-kit
+ * Plugin URI: https://openmost.io/products/wp-datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
  * Author: Openmost
  * Version: 1.0.0

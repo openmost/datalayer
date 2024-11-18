@@ -19,7 +19,7 @@ function wpdl_get_author_page_details() {
 	$details['type'] = 'author';
 	$details['url']  = home_url( add_query_arg( array(), $wp->request ) );
 	$details['path'] = add_query_arg( array(), $wp->request );
-	$details['title'] = '';
+	$details['title'] = null;
 
 	return apply_filters("wpdl_get_author_page_details", $details);
 }

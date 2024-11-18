@@ -64,10 +64,9 @@ function wpdl_get_archive_post_type() {
 function wpdl_get_archive_date() {
 
 	$date = array(
-		'year'  => get_query_var( 'year' ) ?: '',
-		'month' => get_query_var( 'monthnum' ) ?: '',
-		'day'   => get_query_var( 'day' ) ?: '',
-		'date'  => '',
+		'year'  => get_query_var( 'year' ) ?: null,
+		'month' => get_query_var( 'monthnum' ) ?: null,
+		'day'   => get_query_var( 'day' ) ?: null,
 	);
 
     return apply_filters('wpdl_get_archive_date', $date);
