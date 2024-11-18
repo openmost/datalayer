@@ -4,7 +4,7 @@ function wpdl_get_user_details() {
 
 	$user = wp_get_current_user();
 
-	return array(
+	$data = array(
 		'id' => $user->ID,
 		'user_login' => $user->user_login,
 		'user_nicename' => $user->user_nicename,
@@ -13,4 +13,6 @@ function wpdl_get_user_details() {
 		'display_name' => $user->display_name,
 		'roles' => $user->roles,
 	);
+
+    return apply_filters("wpdl_get_user_details", $data, $user);
 }

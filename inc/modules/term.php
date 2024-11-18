@@ -24,7 +24,7 @@ function wpdl_get_terms_per_tax()
         }
     }
 
-    return $result;
+    return apply_filters("wpdl_get_terms_per_tax", $result);
 }
 
 function wpdl_get_parent_term($parent_id, $taxonomy_name)
@@ -59,7 +59,7 @@ function wpdl_get_term_details($term)
         return array();
     }
 
-    return array(
+    $data = array(
         'term_id' => $term->term_id,
         'slug' => $term->slug,
         'name' => $term->name,
@@ -71,4 +71,6 @@ function wpdl_get_term_details($term)
         'count' => $term->count,
         'filter' => $term->filter,
     );
+
+    return apply_filters("wpdl_get_term_details", $data, $term);
 }

@@ -70,6 +70,5 @@ function wpdl_get_archive_date() {
 		'date'  => '',
 	);
 
-
-	return $date;
+    return apply_filters('wpdl_get_archive_date', $date);
 }

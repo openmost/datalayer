@@ -21,5 +21,5 @@ function wpdl_get_author_page_details() {
 	$details['path'] = add_query_arg( array(), $wp->request );
 	$details['title'] = '';
 
-	return $details;
+	return apply_filters("wpdl_get_author_page_details", $details);
 }

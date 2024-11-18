@@ -4,7 +4,7 @@ function wpdl_get_error_page_details() {
 
 	global $wp;
 
-	return array(
+	$data = array(
 		'type'             => 'error',
 		'title'            => wp_get_document_title(),
 		'url'              => home_url( add_query_arg( array(), $wp->request ) ),
@@ -13,4 +13,6 @@ function wpdl_get_error_page_details() {
 		'error_type'       => '404',
 		'http_status_code' => 404,
 	);
+
+    return apply_filters("wpdl_get_error_page_details", $data);
 }

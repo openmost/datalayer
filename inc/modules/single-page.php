@@ -42,5 +42,5 @@ function wpdl_get_single_page_details() {
 		$data = array_merge( $data, $array );
 	}
 
-	return $data;
+	return apply_filters("wpdl_get_single_page_details_data", $data);
 }

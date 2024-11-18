@@ -17,7 +17,7 @@ function wpdl_get_search_details() {
 
 	global $wp_query;
 
-	return array(
+	$data = array(
 		// Matomo default
 		'search'       => get_search_query(),
 		'search_cat'   => null,
@@ -28,4 +28,6 @@ function wpdl_get_search_details() {
 		'found_posts'  => $wp_query->found_posts,
 		'post_count'   => $wp_query->post_count,
 	);
+
+    return apply_filters("wpdl_get_search_details", $data);
 }

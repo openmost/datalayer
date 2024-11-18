@@ -15,8 +15,6 @@ require_once plugin_dir_path(__FILE__) . 'modules/user.php';
 add_action('wp_head', 'wpdl_init', 2);
 function wpdl_init()
 {
-
-    $options = get_option('wpdl-data-layer-settings');
     $dataLayer = array();
 
     if (is_front_page() && is_home()) {
@@ -76,6 +74,9 @@ function wpdl_init()
         $html = "\n" . '<!-- WP DataLayer -->' . "\n";
         $html .= '<script id="wp-datalayer">window.dataLayer=window.dataLayer||[];window.dataLayer.push(' . json_encode($dataLayer) . ')</script>' . "\n";
         $html .= '<!-- End WP DataLayer -->' . "\n\n";
+
+        do_action('wp_datalayer_after_init', $html);
+
         echo wp_kses($html, array('script' => array('id' => array())));
     }
 }
