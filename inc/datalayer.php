@@ -11,6 +11,8 @@ require_once plugin_dir_path(__FILE__) . 'modules/term.php';
 require_once plugin_dir_path(__FILE__) . 'modules/type.php';
 require_once plugin_dir_path(__FILE__) . 'modules/user.php';
 
+require_once plugin_dir_path(__FILE__) . 'modules/plugin-contact-form-7.php';
+
 
 add_action('wp_head', 'wpdl_init', 2);
 function wpdl_init()
