@@ -1,13 +1,15 @@
-=== DataLayer by Openmost ===
+=== DataLayer ===
 
 Contributors: Openmost
 Requires at least: 6.0
-Tested up to: 6.6.2
+Tested up to: 6.7
 Stable tag: 1.0.0
-Tags: datalayer, analytics, matomo, google, tag, manager, gtm, mtm
+Tags: datalayer, analytics, matomo, gtm, tag manager
 Requires PHP: 7.2
-License: GPLv3 or later
+License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Add contextual information to dataLayer for GTM and MTM
 
 == Description ==
 

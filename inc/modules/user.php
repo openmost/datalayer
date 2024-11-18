@@ -12,6 +12,10 @@ function omdl_get_user_details() {
 		'user_registered' => $user->user_registered,
 		'display_name' => $user->display_name,
 		'roles' => $user->roles,
+
+        'sha256_id' => hash('sha256', $user->ID),
+        'sha256_user_login' => hash('sha256', $user->user_login),
+        'sha256_user_email' => hash('sha256', $user->user_email),
 	);
 
     return apply_filters("omdl_get_user_details", $data, $user);

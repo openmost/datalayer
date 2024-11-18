@@ -6,9 +6,13 @@
  * Plugin Name: DataLayer
  * Plugin URI: https://openmost.io/products/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
- * Author: Openmost
  * Version: 1.0.0
- * Author URI: https://openmost.io
+ * Requires at least: 5.0
+ * Requires PHP: 7.2
+ * Author: Openmost
+ * Author URI: https://openmost.io/
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 // Make sure we don't expose any info if called directly
