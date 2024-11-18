@@ -11,6 +11,7 @@ require_once plugin_dir_path(__FILE__) . 'modules/term.php';
 require_once plugin_dir_path(__FILE__) . 'modules/type.php';
 require_once plugin_dir_path(__FILE__) . 'modules/user.php';
 
+// Plugins support
 require_once plugin_dir_path(__FILE__) . 'modules/plugin-contact-form-7.php';
 
 
@@ -82,12 +83,14 @@ function omdl_init()
         $dataLayer['pagination'] = omdl_get_pagination_details();
     }
 
+    apply_filters('omdl_datalayer_object', $dataLayer);
+
     if (!empty($dataLayer)) {
         $html = "\n" . '<!-- dataLayer by Openmost -->' . "\n";
         $html .= '<script id="openmost-datalayer">window.dataLayer=window.dataLayer||[];window.dataLayer.push(' . wp_json_encode($dataLayer) . ')</script>' . "\n";
         $html .= '<!-- End dataLayer -->' . "\n\n";
 
-        do_action('datalayer_after_init', $html);
+        do_action('omdl_datalayer_script', $html);
 
         echo wp_kses($html, array('script' => array('id' => array())));
     }
