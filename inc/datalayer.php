@@ -13,6 +13,7 @@ require_once plugin_dir_path(__FILE__) . 'modules/user.php';
 
 // Plugins support
 require_once plugin_dir_path(__FILE__) . 'modules/plugin-contact-form-7.php';
+require_once plugin_dir_path(__FILE__) . 'modules/plugin-wp-forms.php';
 
 
 add_action('wp_head', 'omdl_init', 2);
