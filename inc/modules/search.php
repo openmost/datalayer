@@ -1,6 +1,6 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 function omdl_get_search_page_details()
 {
@@ -36,20 +36,16 @@ function omdl_get_search_details()
     return apply_filters("omdl_get_search_details", $data);
 }
 
-add_action('wp_head', 'omdl_get_searchform_event', 10);
+add_action('wp_enqueue_scripts', 'omdl_get_searchform_event', 10);
 function omdl_get_searchform_event()
 {
-    ?>
-    <script id="openmost-datalayer-searchform">
-        document.addEventListener('DOMContentLoaded', function () {
-            let searchFormId = "<?php echo apply_filters('omdl_set_search_form_id', 'searchform'); ?>"; // WP default search form id
-            let searchForm = document.getElementById(searchFormId);
-            if (searchForm) {
-                searchForm.addEventListener('submit', function () {
-                    window.dataLayer = window.dataLayer || [];
-                    dataLayer.push({event: 'search'});
-                });
-            }
-        });
-    </script>
-<?php }
+        wp_enqueue_script('omdl-search',
+            plugins_url('assets/js/modules/search.min.js', OMDL_PLUGIN_DIR . '/datalayer'),
+            array(),
+            OMDL_VERSION,
+            array(
+                'in_footer' => true,
+                'strategy' => 'async',
+            )
+        );
+}
