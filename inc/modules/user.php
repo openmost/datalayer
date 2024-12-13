@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 function omdl_get_user_details() {
 
 	$user = wp_get_current_user();

@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Features
 require_once plugin_dir_path(__FILE__) . 'modules/archive.php';
 require_once plugin_dir_path(__FILE__) . 'modules/author.php';

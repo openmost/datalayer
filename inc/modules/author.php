@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 function omdl_get_author_details() {
 	return array(
 		'id'           => get_the_author_meta( 'ID' ),

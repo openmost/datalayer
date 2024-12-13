@@ -3,16 +3,18 @@
  *
  * @wordpress-plugin
  * Plugin Name: DataLayer
- * Plugin URI: https://openmost.io/products/datalayer
+ * Plugin URI: https://github.com/openmost/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
  * Version: 1.0.0
  * Requires at least: 5.0
  * Requires PHP: 7.2
  * Author: Openmost
- * Author URI: https://openmost.io/
+ * Author URI: https://openmost.io
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Make sure we don't expose any info if called directly
 if ( ! function_exists( 'add_action' ) ) {
@@ -21,9 +23,9 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 // Constant
-define( 'OPENMOSTDATALAYER_VERSION', '1.0.0' );
-define( 'OPENMOSTDATALAYER_PHP_MINIMUM', '7.2.0' );
-define( 'OPENMOSTDATALAYER_WP_MINIMUM', '6.0.0' );
-define( 'OPENMOSTDATALAYER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'OMDL_VERSION', '1.0.0' );
+define( 'OMDL_PHP_MINIMUM', '7.2.0' );
+define( 'OMDL_WP_MINIMUM', '6.0.0' );
+define( 'OMDL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-require_once OPENMOSTDATALAYER_PLUGIN_DIR . 'inc/datalayer.php';
+require_once OMDL_PLUGIN_DIR . 'inc/datalayer.php';
