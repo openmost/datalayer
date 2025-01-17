@@ -28,7 +28,7 @@ Get a quick look at all the generated structures!
 
 Easy access to your archive data with a standard event name and subject.
 
-```javascript
+<code>
 {
     "event": "view_archive_date", //_date may be replaces with _tax value
     "page": {
@@ -47,13 +47,13 @@ Easy access to your archive data with a standard event name and subject.
         }
     }
 }
-```
+</code>
 
 = Author page `dataLayer` structure =
 
 Easy access to all author details on his archive page.
 
-```javascript
+<code>
 {
     "event": "view_author",
     "page": {
@@ -69,14 +69,14 @@ Easy access to all author details on his archive page.
         "title": "Author: openmost"
     }
 }
-```
+</code>
 
 = Error page `dataLayer` structure =
 
 This `dataLayer` structure allows you to easily track the 404 error and detect the referring page that led to this error.
 What a great trick yeah?
 
-```javascript
+<code>
 {
     "event": "view_error_404",
     "page": {
@@ -89,14 +89,14 @@ What a great trick yeah?
         "http_status_code": 404
     }
 }
-```
+</code>
 
 = Search results page `dataLayer` structure =
 
 The search key in this object allows you to get the search term and total results to detect invalid searches.
 Very useful for Matomo Tag Manager, and nice hack for Google Tag Manager.
 
-```javascript
+<code>
 {
     "event": "view_search_results",
     "page": {
@@ -115,13 +115,13 @@ Very useful for Matomo Tag Manager, and nice hack for Google Tag Manager.
         "post_count": 3
     }
 }
-```
+</code>
 
 = Home, Post Type `dataLayer` structure (blog posts, custom post type single page) =
 
 The following structure is generated for a single post page, but it automatically adapts to your custom post type, page, etc.
 
-```javascript
+<code>
 {
     "event": "view_single_post",
     "page": {
@@ -193,13 +193,13 @@ The following structure is generated for a single post page, but it automaticall
         "page_template": ""
     }
 }
-```
+</code>
 
 = Term and taxonomy page `dataLayer` structure =
 
 
 
-```javascript
+<code>
 {
     "event": "view_archive_category", // this event name changed for every taxonomy
     "page": {
@@ -218,7 +218,7 @@ The following structure is generated for a single post page, but it automaticall
         }
     }
 }
-```
+</code>
 
 = Pagination `dataLayer` structure =
 
@@ -226,7 +226,7 @@ The following structure is generated for a single post page, but it automaticall
 
 Easy access to your pagination data, detect if users are using your pagination as much as you want.
 
-```javascript
+<code>
 {
     pagination: {
         "posts_per_page": 10,
@@ -236,7 +236,7 @@ Easy access to your pagination data, detect if users are using your pagination a
         "max_num_pages": 5
     }
 }
-```
+</code>
 
 = Authenticated user `dataLayer` structure =
 
@@ -244,7 +244,7 @@ Easy access to your pagination data, detect if users are using your pagination a
 
 User hashed data with SHA256 is very useful for GDPR consent with Google Ads services and user provided data.
 
-```javascript
+<code>
 {
     user: {
         "id": 1,
@@ -261,7 +261,7 @@ User hashed data with SHA256 is very useful for GDPR consent with Google Ads ser
         "sha256_user_email": "679d031c25e557ee84ca86ecaf333ccd8d3d1a3900ee728da83d79a819daf535"
     }
 }
-```
+</code>
 
 = Plugin : Contact Form 7 `dataLayer` structure =
 
@@ -270,57 +270,57 @@ No configuration needed.
 
 Form submitted
 
-```javascript
+<code>
 {
     "event": "wpcf7_submit",
     "wpcf7_form_id": 145,
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
-```
+</code>
 
 Form with invalid fields
 
-```javascript
+<code>
 {
     "event": "wpcf7_invalid",
     "wpcf7_form_id": 145,
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
-```
+</code>
 
 Form spamming detected
 
-```javascript
+<code>
 {
     "event": "wpcf7_spam",
     "wpcf7_form_id": 145,
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
-```
+</code>
 
 Email sent successfully
 
-```javascript
+<code>
 {
     "event": "wpcf7_mail_sent",
     "wpcf7_form_id": 145,
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
-```
+</code>
 
 Failed to send mail
 
-```javascript
+<code>
 {
     "event": "wpcf7_mail_failed",
     "wpcf7_form_id": 145,
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
-```
+</code>
 
 As each event handles `wpcf7_form_details`, here is an example of the object values when the form is submitted with invalid fields.
 
-```javascript
+<code>
 "wpcf7_form_detail": {
         "contactFormId": 145,
         "pluginVersion": "6.0.3",
@@ -363,16 +363,16 @@ As each event handles `wpcf7_form_details`, here is an example of the object val
             "into": "#wpcf7-f145-o1"
         }
     }
-```
+</code>
 
 = Plugin : WP Forms `dataLayer` structure =
 
-```javascript
+<code>
 {
     event: 'wp_forms_submit',
     wp_forms_form_detail: {} // the HTML tag found in DOM
 }
-```
+</code>
 
 
 == Installation ==
@@ -390,7 +390,7 @@ In your favorite Tag Manager:
 Example of configuring a variable:
 for a following `datalayer` object:
 
-```javascript
+<code>
 {
     "event": "view_single_post",
     "page": {
@@ -408,7 +408,7 @@ for a following `datalayer` object:
         }
     }
 }
-```
+</code>
 
 To collect the post type label, you will need to enter the value `page.post_type.label` in your custom variable.
 This variable should be triggered with a custom trigger based on the custom event `view_single_post`.
