@@ -403,21 +403,21 @@ Job done !
 
 ## Frequently Asked Questions
 
-# Is this plugin compatible with Google Tag Manager?
+### Is this plugin compatible with Google Tag Manager?
 
 Yes of course, this plugin fills the data in the `dataLayer` object by default for GTM
 
-# Is this plugin compatible with Matomo Tag Manager?
+### Is this plugin compatible with Matomo Tag Manager?
 
 Yes, even though this plugin fills data into the `dataLayer` object by default for GTM, your Matomo Tag Manager instance is able to read this data if you enable the container option: "Actively sync from Google data layer Tag Manager".
 NO specific configuration required.
 (Your Matomo instance must be at least updated to Matomo >=5.2.0)
 
-# Is it possible to change the default dataLayer structure?
+### Is it possible to change the default dataLayer structure?
 
 Yes, you can use all filters and actions available in the plugin source code to extend and adapt this plugin to your needs.
 
-# How to visualize the contents of the data layer?
+### How to visualize the contents of the data layer?
 
 If you want to check what data is available in the dataLayer, you can open your console tab (F12) in your browser.
 Then type `dataLayer` and press the “Enter” key.
@@ -425,7 +425,7 @@ Your browser displays the `dataLayer` object with all the data it contains.
 
 You can also use the Tag Assistant tool from Google to visualise your `dataLayer` with ease in a fancy user interace.
 
-# How to track forms submission using this plugin?
+### How to track forms submission using this plugin?
 
 If your website uses the WP Contact Form 7 or WP Forms plugin, this plugin will automatically detect form events.
 The list of all events is available in the documentation of this plugin.
