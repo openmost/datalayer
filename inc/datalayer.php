@@ -55,7 +55,11 @@ function omdl_init()
     }
 
     if ((is_archive() && !is_author())) {
-        $dataLayer['event'] = 'view_archive_' . get_queried_object()->taxonomy;
+        if(is_date()){
+            $dataLayer['event'] = 'view_archive_date';
+        } else {
+            $dataLayer['event'] = 'view_archive_' . get_queried_object()->taxonomy;
+        }
         $dataLayer['page'] = omdl_get_archive_page_details();
     }
 
@@ -86,7 +90,7 @@ function omdl_init()
         $dataLayer['pagination'] = omdl_get_pagination_details();
     }
 
-    apply_filters('omdl_datalayer_object', $dataLayer);
+    $dataLayer = apply_filters('omdl_datalayer_object', $dataLayer);
 
     if (!empty($dataLayer)) {
         $html = "\n" . '<!-- dataLayer by Openmost -->' . "\n";

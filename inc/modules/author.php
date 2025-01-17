@@ -21,7 +21,7 @@ function omdl_get_author_page_details() {
 	$details['type'] = 'author';
 	$details['url']  = home_url( add_query_arg( array(), $wp->request ) );
 	$details['path'] = add_query_arg( array(), $wp->request );
-	$details['title'] = null;
+	$details['title'] = get_the_archive_title();
 
 	return apply_filters("omdl_get_author_page_details", $details);
 }

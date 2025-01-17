@@ -1,17 +1,4 @@
-=== DataLayer for GTM and Matomo ===
-
-Contributors: Openmost
-Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 1.0.1
-Tags: datalayer, analytics, matomo, gtm, google tag manager
-Requires PHP: 7.2
-License: GPL v2 or later
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
-
-Add contextual information to dataLayer for GTM and MTM
-
-== Description ==
+## Description
 
 Elevate your website analytics with the DataLayer plugin!
 This robust plugin creates a fully populated and standardized dataLayer object, ensuring seamless integration with both Google Tag Manager and Matomo Tag Manager.
@@ -23,10 +10,7 @@ This robust plugin creates a fully populated and standardized dataLayer object, 
 - User-Friendly Interface: Intuitive controls and settings to quickly get you up and running without any coding knowledge required.
 - Performance Optimized: Lightweight and optimized for speed to ensure your site remains fast and responsive.
 
-
-Get a quick look at all the generated structures!
-
-= Archive page `dataLayer` structure =
+### Archive page `dataLayer` structure
 
 Easy access to your archive data with a standard event name and subject.
 
@@ -51,7 +35,7 @@ Easy access to your archive data with a standard event name and subject.
 }
 ```
 
-= Author page `dataLayer` structure =
+### Author page `dataLayer` structure
 
 Easy access to all author details on his archive page.
 
@@ -73,7 +57,7 @@ Easy access to all author details on his archive page.
 }
 ```
 
-= Error page `dataLayer` structure =
+### Error page `dataLayer` structure
 
 This `dataLayer` structure allows you to easily track the 404 error and detect the referring page that led to this error.
 What a great trick yeah?
@@ -93,7 +77,7 @@ What a great trick yeah?
 }
 ```
 
-= Search results page `dataLayer` structure =
+### Search results page `dataLayer` structure
 
 The search key in this object allows you to get the search term and total results to detect invalid searches.
 Very useful for Matomo Tag Manager, and nice hack for Google Tag Manager.
@@ -119,7 +103,7 @@ Very useful for Matomo Tag Manager, and nice hack for Google Tag Manager.
 }
 ```
 
-= Home, Post Type `dataLayer` structure (blog posts, custom post type single page) =
+### Home, Post Type `dataLayer` structure (blog posts, custom post type single page)
 
 The following structure is generated for a single post page, but it automatically adapts to your custom post type, page, etc.
 
@@ -167,7 +151,7 @@ The following structure is generated for a single post page, but it automaticall
         "taxonomies": {
             "category": {
                 "name": "category",
-                "label": "Categories",
+                "label": "Catégories",
                 "description": "",
                 "object_type": [
                     "post"
@@ -197,7 +181,7 @@ The following structure is generated for a single post page, but it automaticall
 }
 ```
 
-= Term and taxonomy page `dataLayer` structure =
+### Term and taxonomy page `dataLayer` structure
 
 
 
@@ -222,7 +206,7 @@ The following structure is generated for a single post page, but it automaticall
 }
 ```
 
-= Pagination `dataLayer` structure =
+### Pagination `dataLayer` structure
 
 `pagination` object structure is automatically added to all pages that have pagination.
 
@@ -240,7 +224,7 @@ Easy access to your pagination data, detect if users are using your pagination a
 }
 ```
 
-= Authenticated user `dataLayer` structure =
+### Authenticated user `dataLayer` structure
 
 `user` object is automatically added to all pages that have pagination.
 
@@ -265,7 +249,7 @@ User hashed data with SHA256 is very useful for GDPR consent with Google Ads ser
 }
 ```
 
-= Plugin : Contact Form 7 `dataLayer` structure =
+### Plugin : Contact Form 7 `dataLayer` structure
 
 This plugin automatically detects the use of WP Contact Form 7.
 No configuration needed.
@@ -295,7 +279,7 @@ Form spamming detected
 ```javascript
 {
     "event": "wpcf7_spam",
-    "wpcf7_form_id": 145,
+    "wpcf7_form_id": 145, 
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
 ```
@@ -305,7 +289,7 @@ Email sent successfully
 ```javascript
 {
     "event": "wpcf7_mail_sent",
-    "wpcf7_form_id": 145,
+    "wpcf7_form_id": 145, 
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
 ```
@@ -315,12 +299,12 @@ Failed to send mail
 ```javascript
 {
     "event": "wpcf7_mail_failed",
-    "wpcf7_form_id": 145,
+    "wpcf7_form_id": 145, 
     "wpcf7_form_detail": {} // See wpcf7_form_details below
 }
 ```
 
-As each event handles `wpcf7_form_details`, here is an example of the object values when the form is submitted with invalid fields.
+As each event handles `wpcf7_form_details`, here is an example of the object values ​​when the form is submitted with invalid fields.
 
 ```javascript
 "wpcf7_form_detail": {
@@ -367,17 +351,17 @@ As each event handles `wpcf7_form_details`, here is an example of the object val
     }
 ```
 
-= Plugin : WP Forms `dataLayer` structure =
+### Plugin : WP Forms `dataLayer` structure
 
 ```javascript
 {
-    event: 'wp_forms_submit',
+    event: 'wp_forms_submit', 
     wp_forms_form_detail: {} // the HTML tag found in DOM
 }
 ```
 
 
-== Installation ==
+## Installation
 
 To start using the dataLayer plugin, you need to install it from the marketplace or manually.
 Then activate the plugin in the WordPress administration.
@@ -417,24 +401,23 @@ This variable should be triggered with a custom trigger based on the custom even
 
 Job done !
 
+## Frequently Asked Questions
 
-== Frequently Asked Questions ==
-
-= Is this plugin compatible with Google Tag Manager? =
+# Is this plugin compatible with Google Tag Manager?
 
 Yes of course, this plugin fills the data in the `dataLayer` object by default for GTM
 
-= Is this plugin compatible with Matomo Tag Manager? =
+# Is this plugin compatible with Matomo Tag Manager?
 
 Yes, even though this plugin fills data into the `dataLayer` object by default for GTM, your Matomo Tag Manager instance is able to read this data if you enable the container option: "Actively sync from Google data layer Tag Manager".
 NO specific configuration required.
 (Your Matomo instance must be at least updated to Matomo >=5.2.0)
 
-= Is it possible to change the default dataLayer structure? =
+# Is it possible to change the default dataLayer structure?
 
 Yes, you can use all filters and actions available in the plugin source code to extend and adapt this plugin to your needs.
 
-= How to visualize the contents of the data layer? =
+# How to visualize the contents of the data layer?
 
 If you want to check what data is available in the dataLayer, you can open your console tab (F12) in your browser.
 Then type `dataLayer` and press the “Enter” key.
@@ -442,7 +425,7 @@ Your browser displays the `dataLayer` object with all the data it contains.
 
 You can also use the Tag Assistant tool from Google to visualise your `dataLayer` with ease in a fancy user interace.
 
-= How to track forms submission using this plugin? =
+# How to track forms submission using this plugin?
 
 If your website uses the WP Contact Form 7 or WP Forms plugin, this plugin will automatically detect form events.
 The list of all events is available in the documentation of this plugin.
@@ -451,18 +434,18 @@ Contact Form 7 sent mail event is `wpcf7_mail_sent`
 
 WP Forms form submit event is `wp_forms_submit`
 
-== Screenshots ==
+## Screenshots
 
 
 
-== Changelog ==
+## Changelog
 
-= 1.0.1 =
+### 1.0.1
 Release data: 2025-01-17
 
 Create documentation
 
-= 1.0.0 =
+### 1.0.0
 Release date: 2024-11-18
 
 Plugin first release, enjoy all the features !
