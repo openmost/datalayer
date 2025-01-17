@@ -6,8 +6,6 @@ This robust plugin creates a fully populated and standardized dataLayer object, 
 - Instant Setup: Automatically generates and populates a dataLayer object with essential website and user interaction data.
 - Universal Compatibility: Works flawlessly with Google Tag Manager and Matomo Tag Manager, making it easier to manage your tagging needs.
 - Customizable Data: Easily add or modify data points to fit your specific tracking requirements.
-- Enhanced Analytics: Enable precise tracking of user behavior, e-commerce transactions, form submissions, and more.
-- User-Friendly Interface: Intuitive controls and settings to quickly get you up and running without any coding knowledge required.
 - Performance Optimized: Lightweight and optimized for speed to ensure your site remains fast and responsive.
 
 ### Archive page `dataLayer` structure
