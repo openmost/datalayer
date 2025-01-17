@@ -206,7 +206,7 @@ The following structure is generated for a single post page, but it automaticall
 
 ### Pagination `dataLayer` structure
 
-`pagination` object structure is automatically added to all pages that have pagination.
+The `pagination` object structure is automatically added to all pages that have pagination.
 
 Easy access to your pagination data, detect if users are using your pagination as much as you want.
 
@@ -224,7 +224,7 @@ Easy access to your pagination data, detect if users are using your pagination a
 
 ### Authenticated user `dataLayer` structure
 
-`user` object is automatically added to all pages that have pagination.
+The `user` object is automatically added to all pages that have pagination.
 
 User hashed data with SHA256 is very useful for GDPR consent with Google Ads services and user provided data.
 
