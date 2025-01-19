@@ -240,7 +240,7 @@ Easy access to your pagination data, detect if users are using your pagination a
 
 = Authenticated user `dataLayer` structure =
 
-The `user` object is automatically added to all pages that have pagination.
+The `user` object is automatically added to all page when user is logged in.
 
 User hashed data with SHA256 is very useful for GDPR consent with Google Ads services and user provided data.
 
@@ -384,7 +384,7 @@ Once the plugin is activated, you will need to understand the different structur
 
 In your favorite Tag Manager:
 
-- To trigger a tag at a specific moment, you will need to create a trigger based on the value of the `event` key of the desired apge.
+- To trigger a tag at a specific moment, you will need to create a trigger based on the value of the `event` key of the desired page.
 - To read values from the `dataLayer` object and report them to your audience analysis tools, you will need to create custom variables of the "data layer" type and enter the full path.
 
 Example of configuring a variable:
