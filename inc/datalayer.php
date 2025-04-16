@@ -57,8 +57,10 @@ function omdl_init()
     if ((is_archive() && !is_author())) {
         if(is_date()){
             $dataLayer['event'] = 'view_archive_date';
-        } else {
+        } else if(get_queried_object()->taxonomy){
             $dataLayer['event'] = 'view_archive_' . get_queried_object()->taxonomy;
+        } else {
+            $dataLayer['event'] = 'view_archive';
         }
         $dataLayer['page'] = omdl_get_archive_page_details();
     }

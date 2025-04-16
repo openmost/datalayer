@@ -2,8 +2,8 @@
 
 Contributors: Openmost
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 1.0.2
+Tested up to: 6.8
+Stable tag: 1.0.3
 Tags: datalayer, analytics, matomo, gtm, google tag manager
 Requires PHP: 7.2
 License: GPL v2 or later

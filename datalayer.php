@@ -6,7 +6,7 @@
  * Plugin URI: https://github.com/openmost/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
  * Version: 1.0.2
- * Requires at least: 5.0
+ * Requires at least: 6.0
  * Requires PHP: 7.2
  * Author: Openmost
  * Author URI: https://openmost.io
@@ -23,7 +23,7 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 // Constant
-define( 'OMDL_VERSION', '1.0.2' );
+define( 'OMDL_VERSION', '1.0.3' );
 define( 'OMDL_PHP_MINIMUM', '7.2.0' );
 define( 'OMDL_WP_MINIMUM', '6.0.0' );
 define( 'OMDL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
