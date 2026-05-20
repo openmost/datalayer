@@ -25,7 +25,7 @@ if ( ! function_exists( 'add_action' ) ) {
 // Constant
 define( 'OMDL_VERSION', '1.0.4' );
 define( 'OMDL_PHP_MINIMUM', '8.2.0' );
-define( 'OMDL_WP_MINIMUM', '6.0.0' );
+define( 'OMDL_WP_MINIMUM', '7.0.0' );
 define( 'OMDL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once OMDL_PLUGIN_DIR . 'inc/datalayer.php';
