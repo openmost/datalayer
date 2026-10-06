@@ -2,8 +2,8 @@
 
 Contributors: Openmost
 Requires at least: 6.0
-Tested up to: 7.0
-Stable tag: 1.0.4
+Tested up to: 7.1.2
+Stable tag: 1.0.5
 Tags: datalayer, analytics, matomo, gtm, google tag manager
 Requires PHP: 8.2
 License: GPL v2 or later
@@ -453,7 +453,13 @@ WP Forms form submit event is `wp_forms_submit`
 
 
 
+
 == Changelog ==
+
+= 1.0.5 =
+Release data: 2026-10-06
+
+Fix: Issue in realease header
 
 = 1.0.2 =
 Release data: 2025-01-17

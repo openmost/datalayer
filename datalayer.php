@@ -5,7 +5,7 @@
  * Plugin Name: DataLayer for GTM and Matomo
  * Plugin URI: https://github.com/openmost/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
- * Version: 1.0.2
+ * Version: 1.0.5
  * Requires at least: 6.0
  * Requires PHP: 7.2
  * Author: Openmost
@@ -23,7 +23,7 @@ if ( ! function_exists( 'add_action' ) ) {
 }
 
 // Constant
-define( 'OMDL_VERSION', '1.0.4' );
+define( 'OMDL_VERSION', '1.0.5' );
 define( 'OMDL_PHP_MINIMUM', '8.2.0' );
 define( 'OMDL_WP_MINIMUM', '7.0.0' );
 define( 'OMDL_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
