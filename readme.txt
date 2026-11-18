@@ -3,7 +3,7 @@
 Contributors: Openmost
 Requires at least: 6.0
 Tested up to: 7.1.5
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 Tags: datalayer, analytics, matomo, gtm, google tag manager
 Requires PHP: 7.0
 License: GPL v2 or later
@@ -455,6 +455,13 @@ WP Forms form submit event is `wp_forms_submit`
 
 
 == Changelog ==
+
+= 1.0.7 =
+Release date: 2026-11-18
+
+Plugin URI and Author URI now point to openmost.com, the plugin page is openmost.com/matomo/extensions/datalayer
+The example user payload uses jane@example.com
+Tested up to WordPress 7.1.5
 
 = 1.0.6 =
 Release date: 2026-11-18
