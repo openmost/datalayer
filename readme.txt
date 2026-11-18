@@ -2,7 +2,7 @@
 
 Contributors: Openmost
 Requires at least: 6.0
-Tested up to: 7.1.4
+Tested up to: 7.1.5
 Stable tag: 1.0.6
 Tags: datalayer, analytics, matomo, gtm, google tag manager
 Requires PHP: 7.0
@@ -250,7 +250,7 @@ User hashed data with SHA256 is very useful for GDPR consent with Google Ads ser
         "id": 1,
         "user_login": "openmost",
         "user_nicename": "Openmost",
-        "user_email": "no-reply@openmost.io",
+        "user_email": "jane@example.com",
         "user_registered": "2024-01-01 12:00:00",
         "display_name": "openmost",
         "roles": [

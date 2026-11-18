@@ -3,13 +3,13 @@
  *
  * @wordpress-plugin
  * Plugin Name: DataLayer for GTM and Matomo
- * Plugin URI: https://github.com/openmost/datalayer
+ * Plugin URI: https://openmost.com/matomo/extensions/datalayer
  * Description: Generate a contextual, complete and ready-to-use dataLayer for your Tag Manager.
  * Version: 1.0.6
  * Requires at least: 6.0
  * Requires PHP: 7.0
  * Author: Openmost
- * Author URI: https://openmost.io
+ * Author URI: https://openmost.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */

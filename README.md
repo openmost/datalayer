@@ -234,7 +234,7 @@ User hashed data with SHA256 is very useful for GDPR consent with Google Ads ser
         "id": 1,
         "user_login": "openmost",
         "user_nicename": "Openmost",
-        "user_email": "no-reply@openmost.io",
+        "user_email": "jane@example.com",
         "user_registered": "2024-01-01 12:00:00",
         "display_name": "openmost",
         "roles": [
