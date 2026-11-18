@@ -1,0 +1,8 @@
+# Excluded from WordPress.org SVN (used by the deploy workflow).
+/.git
+/.github
+/.claude
+/.gitignore
+/.gitattributes
+/.distignore
+/.DS_Store
