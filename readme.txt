@@ -2,10 +2,10 @@
 
 Contributors: Openmost
 Requires at least: 6.0
-Tested up to: 7.1.2
-Stable tag: 1.0.5
+Tested up to: 7.1.4
+Stable tag: 1.0.6
 Tags: datalayer, analytics, matomo, gtm, google tag manager
-Requires PHP: 8.2
+Requires PHP: 7.0
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -455,6 +455,13 @@ WP Forms form submit event is `wp_forms_submit`
 
 
 == Changelog ==
+
+= 1.0.6 =
+Release date: 2026-11-18
+
+Fix: wpcf7_mail_sent now pushes wpcf7_form_id and wpcf7_form_detail, like the other Contact Form 7 events
+Tested up to WordPress 7.1.4
+Requires PHP aligned to 7.0, the actual minimum of the code
 
 = 1.0.5 =
 Release data: 2026-10-06

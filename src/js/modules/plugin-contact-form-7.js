@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
         form.addEventListener('wpcf7mailsent', function (e) {
             dataLayer.push({
                 event: 'wpcf7_mail_sent',
-                wpcf7FormDetail: e.detail,
+                wpcf7_form_id: e.detail.contactFormId,
+                wpcf7_form_detail: e.detail,
             })
         }, false)
 
